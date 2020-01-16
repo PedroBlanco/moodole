@@ -13,8 +13,8 @@ services:
     container_name: moodle
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.moodle.entrypoints=web"
-      - "traefik.http.routers.moodle.rule=PathPrefix(`/moodle`)"
+      - "traefik.http.routers.moodle.entrypoints=web_aux_90"
+      - "traefik.http.routers.moodle.rule=PathPrefix(`/`)"
     environment:
     - NGINX_PORT=80
     - MOODOLE_DB_URL=moodledb
@@ -24,4 +24,3 @@ services:
     - MOODOLE_DB_PORT=5432
     - MOODOLE_MAX_BODY_SIZE=200M
     - MOODOLE_BODY_TIMEOUT=300s
-    - MOODOLE_ADDROOT=/moodle
