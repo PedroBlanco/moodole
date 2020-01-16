@@ -15,7 +15,7 @@ $CFG->dboptions = array (
   'dbsocket' => '',
 );
 // $CFG->wwwroot   = getenv('MOODOLE_URL');;
-$CFG->wwwroot   = 'http://'.$_SERVER['HTTP_HOST'];
+$CFG->wwwroot   = 'http://'.$_SERVER['HTTP_HOST'].getenv('MOODOLE_ADDROOT');
 $CFG->dataroot  = '/var/lib/nginx/moodledata';
 $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
